@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Ексклузивно за България · Бонус върху първия депозит</title>
+  <meta name="description" content="Само за нови играчи в България: 100% бонус върху първия депозит, безплатни завъртания, бърза регистрация. 18+. Играйте отговорно." />
+  <style>
+    :root{--bg:#0b0f1a;--text:#eef3ff;--accent:#79e06a;--accent2:#56b4d3}
+    body{
+      margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+        url("banner-a.png") no-repeat center center fixed;
+      background-size:cover;color:var(--text);
+      animation:bgPulse 8s ease-in-out infinite;
+    }
+    @keyframes bgPulse{0%{background-blend-mode:multiply;}50%{background-blend-mode:overlay;}100%{background-blend-mode:multiply;}}
+    .container{max-width:1100px;margin:0 auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:20px;margin:10px 0}
+    h1{font-size:clamp(26px,5vw,44px);color:#79e06a;text-shadow:0 0 10px rgba(121,224,106,.6)}
+    p.lead{color:#cde9d2;font-size:18px;font-weight:500}
+    .btn{display:inline-block;padding:14px 18px;border-radius:14px;font-weight:700;text-decoration:none;text-align:center}
+    .btn-primary{background:linear-gradient(180deg,var(--accent),#5aca3e);color:#071005;box-shadow:0 0 15px rgba(121,224,106,.6)}
+    .btn-ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.2)}
+    .progress{height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:10px}
+    .bar{height:100%;width:30%;background:linear-gradient(90deg,var(--accent2),#9fe3f2)}
+    .timer{margin-top:6px;color:#cfe4ff}
+    .list{list-style:none;padding:0;margin:0}
+    .list li{margin:8px 0;font-size:16px}
+    /* 🎰 Современная слот-машина */
+    .slot-machine-modern {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(121,224,106,0.4);
+    }
+    .reel {
+      width: 70px;
+      height: 100px;
+      background: #fff;
+      border-radius: 8px;
+      font-size: 48px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      color: #111;
+      border: 2px solid #444;
+    }
+    .reel.win {
+      animation: glow 1s infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #79e06a; }
+      to { box-shadow: 0 0 25px #79e06a; }
+    }
+    @media(max-width:600px){.container{padding:12px}h1{font-size:22px}.btn{width:100%;padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div><strong>🇧🇬 Ексклузивно за България</strong> <span style="font-size:12px">18+ Отговорна игра</span></div>
+      <div style="font-size:12px;color:#aaa">Прозрачни условия • Сигурност</div>
+    </header>
+
+    <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start;flex-wrap:wrap">
+      <section class="card">
+        <h1>🔥 Удвои депозита си – играй с предимство още сега!</h1>
+        <p class="lead">Ексклузивна оферта за нови играчи от България – 100% бонус на първия депозит + безплатни завъртания в най-горещите слотове.</p>
+        <ul class="list">
+          <li>⚡ Бърза регистрация – под 2 минути</li>
+          <li>🎰 Безплатни завъртания на топ игри</li>
+          <li>💸 Двойно повече средства за игра</li>
+          <li>🔒 Сигурни депозити и тегления</li>
+        </ul>
+        <div class="progress"><div class="bar" id="bar"></div></div>
+        <div class="timer">Офертата е активна още <strong id="count">15:00</strong></div>
+        <div style="margin-top:16px">
+          <a id="goBtn" class="btn btn-primary" href="#">Вземи бонуса си</a>
+          <a class="btn btn-ghost" href="#terms">Условия</a>
+        </div>
+        <div class="card" style="margin-top:16px;text-align:center">
+          <p>🎉 Вече над <strong id="players">1247</strong> играчи се включиха този месец</p>
+          <p style="color:#ffb347">Остават само <strong id="slots">63</strong> бонус места</p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>🎰 Опитай късмета си!</h3>
+          <div class="slot-machine-modern">
+            <div class="reel" id="reel1">🍒</div>
+            <div class="reel" id="reel2">🔔</div>
+            <div class="reel" id="reel3">💎</div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Как работи?</h3>
+          <ol>
+            <li>Натисни „Регистрация“</li>
+            <li>Създай акаунт за под 2 минути</li>
+            <li>Депозирай минимум 50 лв.</li>
+            <li>Вземи бонуса автоматично</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+
+    <section id="terms" class="card">
+      <h3>Условия</h3>
+      <ul>
+        <li>Само за нови потребители над 18 години.</li>
+        <li>Офертата е валидна при първи депозит.</li>
+        <li>Играйте отговорно.</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    const OFFER_URL="https://standarttrack.com/?promo=2b56dba8-7a15-4f85-ba28-70c32d671fdb&target=register";
+    function buildTargetUrl(){
+      const url=new URL(OFFER_URL);
+      const src=new URLSearchParams(window.location.search);
+      ["utm_source","utm_medium","utm_campaign"].forEach(k=>{if(src.has(k))url.searchParams.set(k,src.get(k));});
+      return url.toString();
+    }
+    document.getElementById("goBtn").href=buildTargetUrl();
+
+    // таймер
+    let left=15*60;
+    function tick(){
+      left=Math.max(0,left-1);
+      const m=String(Math.floor(left/60)).padStart(2,'0');
+      const s=String(left%60).padStart(2,'0');
+      document.getElementById("count").textContent=`${m}:${s}`;
+      if(left>0)setTimeout(tick,1000);
+    } setTimeout(tick,1000);
+
+    // прогресс
+    const bar=document.getElementById("bar");
+    let p=30;setInterval(()=>{p=Math.min(95,p+Math.random()*3);bar.style.width=p+'%';},800);
+
+    // счетчики
+    let players=1247;
+    setInterval(()=>{players+=Math.floor(Math.random()*3);document.getElementById("players").textContent=players;},5000);
+    let slots=63;
+    setInterval(()=>{if(slots>8){slots-=Math.random()<0.3?1:0;document.getElementById("slots").textContent=slots;}},7000);
+
+    // современная слот-машина
+    const symbols=["🍒","🔔","7️⃣","💎","🍋","⭐"];
+    function spinReel(reel,delay){
+      let i=0;
+      const interval=setInterval(()=>{reel.textContent=symbols[i%symbols.length];i++;},100);
+      setTimeout(()=>{
+        clearInterval(interval);
+        reel.textContent="7️⃣";
+        reel.classList.add("win");
+      },delay);
+    }
+    function spinAll(){
+      document.querySelectorAll(".reel").forEach(r=>r.classList.remove("win"));
+      spinReel(document.getElementById("reel1"),2000);
+      spinReel(document.getElementById("reel2"),2500);
+      spinReel(document.getElementById("reel3"),3000);
+    }
+    setInterval(spinAll,6000);spinAll();
+  </script>
+</body>
+</html>
