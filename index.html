@@ -6,72 +6,159 @@
   <title>Ексклузивно за България · Бонус върху първия депозит</title>
   <meta name="description" content="Само за нови играчи в България: 100% бонус върху първия депозит, безплатни завъртания, бърза регистрация. 18+. Играйте отговорно." />
   <style>
-    :root{--bg:#0b0f1a;--text:#eef3ff;--accent:#79e06a;--accent2:#56b4d3}
-    body{
-      margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+    :root {
+      --bg:#0b0f1a;--text:#eef3ff;
+      --accent:#79e06a;--accent2:#56b4d3
+    }
+    body {
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
       background:
         linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
         url("banner-a.png") no-repeat center center fixed;
-      background-size:cover;color:var(--text);
+      background-size:cover;
+      color:var(--text);
       animation:bgPulse 8s ease-in-out infinite;
     }
-    @keyframes bgPulse{0%{background-blend-mode:multiply;}50%{background-blend-mode:overlay;}100%{background-blend-mode:multiply;}}
-    .container{max-width:1100px;margin:0 auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:20px;margin:10px 0}
-    h1{font-size:clamp(26px,5vw,44px);color:#79e06a;text-shadow:0 0 10px rgba(121,224,106,.6)}
-    p.lead{color:#cde9d2;font-size:18px;font-weight:500}
-    .btn{display:inline-block;padding:14px 18px;border-radius:14px;font-weight:700;text-decoration:none;text-align:center}
-    .btn-primary{background:linear-gradient(180deg,var(--accent),#5aca3e);color:#071005;box-shadow:0 0 15px rgba(121,224,106,.6)}
-    .btn-ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.2)}
-    .progress{height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:10px}
-    .bar{height:100%;width:30%;background:linear-gradient(90deg,var(--accent2),#9fe3f2)}
-    .timer{margin-top:6px;color:#cfe4ff}
-    .list{list-style:none;padding:0;margin:0}
-    .list li{margin:8px 0;font-size:16px}
+    @keyframes bgPulse {
+      0%{background-blend-mode:multiply;}
+      50%{background-blend-mode:overlay;}
+      100%{background-blend-mode:multiply;}
+    }
+    .container {
+      max-width:1000px;
+      margin:0 auto;
+      padding:20px;
+    }
+    header {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      font-size:clamp(12px,2vw,14px);
+    }
+    .card {
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:20px;
+      padding:20px;
+      margin:10px 0;
+    }
+    h1 {
+      font-size:clamp(20px,5vw,36px);
+      line-height:1.3;
+      text-align:center;
+      color:#79e06a;
+      text-shadow:0 0 10px rgba(121,224,106,.6);
+    }
+    p.lead {
+      color:#cde9d2;
+      font-size:clamp(14px,3.5vw,18px);
+      font-weight:500;
+      text-align:center;
+    }
+    .btn {
+      display:inline-block;
+      width:100%;
+      padding:clamp(12px,4vw,16px);
+      margin-bottom:10px;
+      border-radius:14px;
+      font-weight:700;
+      text-decoration:none;
+      text-align:center;
+      font-size:clamp(14px,4vw,18px);
+    }
+    .btn-primary {
+      background:linear-gradient(180deg,var(--accent),#5aca3e);
+      color:#071005;
+      box-shadow:0 0 15px rgba(121,224,106,.6);
+    }
+    .btn-ghost {
+      background:transparent;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.2);
+    }
+    .progress {
+      height:10px;
+      background:rgba(255,255,255,.08);
+      border-radius:999px;
+      overflow:hidden;
+      margin-top:10px;
+    }
+    .bar {
+      height:100%;
+      width:30%;
+      background:linear-gradient(90deg,var(--accent2),#9fe3f2);
+    }
+    .timer {
+      margin-top:6px;
+      color:#cfe4ff;
+      text-align:center;
+      font-size:clamp(12px,3vw,16px);
+    }
+    .list {
+      list-style:none;
+      padding:0;
+      margin:10px 0;
+    }
+    .list li {
+      margin:8px 0;
+      font-size:clamp(14px,3.5vw,16px);
+      text-align:left;
+    }
     /* 🎰 Современная слот-машина */
     .slot-machine-modern {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      padding: 20px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(121,224,106,0.4);
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      padding:20px;
+      background:rgba(0,0,0,0.6);
+      border-radius:16px;
+      box-shadow:0 0 20px rgba(121,224,106,0.4);
+      transform:scale(clamp(0.8,5vw,1));
+      margin:0 auto;
     }
     .reel {
-      width: 70px;
-      height: 100px;
-      background: #fff;
-      border-radius: 8px;
-      font-size: 48px;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-      color: #111;
-      border: 2px solid #444;
+      width:clamp(50px,15vw,70px);
+      height:clamp(70px,20vw,100px);
+      background:#fff;
+      border-radius:8px;
+      font-size:clamp(32px,8vw,48px);
+      font-weight:bold;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#111;
+      border:2px solid #444;
     }
     .reel.win {
-      animation: glow 1s infinite alternate;
+      animation:glow 1s infinite alternate;
     }
     @keyframes glow {
-      from { box-shadow: 0 0 10px #79e06a; }
-      to { box-shadow: 0 0 25px #79e06a; }
+      from { box-shadow:0 0 10px #79e06a; }
+      to { box-shadow:0 0 25px #79e06a; }
     }
-    @media(max-width:600px){.container{padding:12px}h1{font-size:22px}.btn{width:100%;padding:16px}}
+    .grid-two {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      align-items:start;
+    }
+    @media(max-width:768px){
+      .grid-two {grid-template-columns:1fr;}
+      .card{text-align:center}
+      .list li{text-align:center}
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div><strong>🇧🇬 Ексклузивно за България</strong> <span style="font-size:12px">18+ Отговорна игра</span></div>
-      <div style="font-size:12px;color:#aaa">Прозрачни условия • Сигурност</div>
+      <div><strong>🇧🇬 Ексклузивно за България</strong> <span>18+ Отговорна игра</span></div>
+      <div style="color:#aaa">Прозрачни условия • Сигурност</div>
     </header>
 
-    <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:start;flex-wrap:wrap">
+    <div class="grid-two">
       <section class="card">
         <h1>🔥 Удвои депозита си – играй с предимство още сега!</h1>
         <p class="lead">Ексклузивна оферта за нови играчи от България – 100% бонус на първия депозит + безплатни завъртания в най-горещите слотове.</p>
@@ -87,7 +174,7 @@
           <a id="goBtn" class="btn btn-primary" href="#">Вземи бонуса си</a>
           <a class="btn btn-ghost" href="#terms">Условия</a>
         </div>
-        <div class="card" style="margin-top:16px;text-align:center">
+        <div class="card" style="margin-top:16px;">
           <p>🎉 Вече над <strong id="players">1247</strong> играчи се включиха този месец</p>
           <p style="color:#ffb347">Остават само <strong id="slots">63</strong> бонус места</p>
         </div>
@@ -104,7 +191,7 @@
         </div>
         <div class="card">
           <h3>Как работи?</h3>
-          <ol>
+          <ol style="text-align:left">
             <li>Натисни „Регистрация“</li>
             <li>Създай акаунт за под 2 минути</li>
             <li>Депозирай минимум 50 лв.</li>
@@ -150,11 +237,13 @@
 
     // счетчики
     let players=1247;
-    setInterval(()=>{players+=Math.floor(Math.random()*3);document.getElementById("players").textContent=players;},5000);
+    setInterval(()=>{players+=Math.floor(Math.random()*3);
+      document.getElementById("players").textContent=players;},5000);
     let slots=63;
-    setInterval(()=>{if(slots>8){slots-=Math.random()<0.3?1:0;document.getElementById("slots").textContent=slots;}},7000);
+    setInterval(()=>{if(slots>8){slots-=Math.random()<0.3?1:0;
+      document.getElementById("slots").textContent=slots;}},7000);
 
-    // современная слот-машина
+    // слот-машина
     const symbols=["🍒","🔔","7️⃣","💎","🍋","⭐"];
     function spinReel(reel,delay){
       let i=0;
